@@ -59,7 +59,7 @@ class ViewController: UIViewController {
 
 
     private lazy var exampleBlueView: UIView = {
-        $0.backgroundColor = .blue.withAlphaComponent(0.5)
+        $0.backgroundColor = .red.withAlphaComponent(0.5)
         return $0
     }(UIView())
 
