@@ -7,6 +7,15 @@
 		<string>Pacifico.ttf</string>
 		<string>Stranger.otf</string>
 		<string>FwZY7-Qmy14u9lezJ96A4sijpFu_.ttf</string>
+		<string>Jost-Italic-VariableFont.ttf</string>
+		<string>Jost-VariableFont.ttf</string>
+		<string>Jost-Bold.ttf</string>
+		<string>Jost-Thin.ttf</string>
+		<string>Jost-LightItalic.ttf</string>
+		<string>Jost-MediumItalic.ttf</string>
+		<string>Jost-Medium.ttf</string>
+		<string>Jost-Light.ttf</string>
+		<string>Jost-Regular.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

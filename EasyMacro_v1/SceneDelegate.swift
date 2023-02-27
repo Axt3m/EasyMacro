@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         
         // Create your view hierarchy programmatically
-        let controller = ViewController()
+        let controller = WelcomeViewController()
         let mainNavController = UINavigationController(rootViewController: controller)
         
         // Set the root view controller of the window with your view controller

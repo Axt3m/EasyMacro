@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class PushedViewController: UIViewController {
+class FirstViewController: UIViewController {
     
     // MARK: - Init
 
