@@ -44,10 +44,11 @@ class PushedViewController: UIViewController {
     }(UIStackView())
     
     private lazy var label1: UILabel = {
-        $0.font = .systemFont(ofSize: 16)
+        //$0.font = .systemFont(ofSize: 16)
         $0.textColor = .blue
         $0.text = "Coucou"
         $0.textAlignment = .center
+        $0.font = UIFont(name: "Pacifico", size: 16)
         return $0
     }(UILabel())
     
