@@ -16,6 +16,7 @@
 		<string>Jost-Medium.ttf</string>
 		<string>Jost-Light.ttf</string>
 		<string>Jost-Regular.ttf</string>
+		<string>Jost-SemiBold.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

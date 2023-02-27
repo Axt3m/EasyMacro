@@ -66,7 +66,7 @@ class WelcomeViewController: UIViewController {
     private lazy var welcomeTitle: UILabel = {
         $0.text = Constants.welcomeTitle
         $0.font = UIFont(name: Constants.welcomeTitlePolice, size: 40)
-        $0.textColor = .blue
+        $0.textColor = UIColor(red: CGFloat(72.0/255.0), green: CGFloat(70.0/255.0), blue: CGFloat(70.0/255.0), alpha: 1)
         $0.textAlignment = .center
         $0.numberOfLines = 0
         
@@ -77,7 +77,7 @@ class WelcomeViewController: UIViewController {
     private lazy var welcomeText: UILabel = {
         $0.text = Constants.welcomeText
         $0.font = UIFont(name: Constants.welcomeTextPolice, size: 18)
-        $0.textColor = .blue
+        $0.textColor = .black.withAlphaComponent(0.9)
         $0.textAlignment = .center
         $0.numberOfLines = 0
         $0.lineBreakMode = .byWordWrapping
@@ -88,7 +88,7 @@ class WelcomeViewController: UIViewController {
         $0.setTitle(Constants.welcomeButtonTitle, for: .normal)
         $0.titleLabel?.font = UIFont(name: Constants.welcomeButtonPolice, size: 21)
         $0.addTarget(self, action: #selector(pushAction), for: .touchUpInside)
-        $0.backgroundColor = .blue
+        $0.backgroundColor = UIColor(red: CGFloat(67.0/255.0), green: CGFloat(211.0/255.0), blue: CGFloat(175.0/255.0), alpha: 1).withAlphaComponent(0.9)
         $0.layer.cornerRadius = 18
         return addShadow(to: $0)
     }(UIButton())
@@ -101,6 +101,9 @@ class WelcomeViewController: UIViewController {
         
         return button
     }
+    
+    //UIColor(red: CGFloat(238.0/255.0), green: CGFloat(69.0/255.0), blue: CGFloat(50.0/255.0), alpha: 1)
+    //UIColor(red: CGFloat(239.0/255.0), green: CGFloat(106.0/255.0), blue: CGFloat(91.0/255.0), alpha: 1)
 
     // MARK: - Actions
 
