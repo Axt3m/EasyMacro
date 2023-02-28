@@ -31,6 +31,11 @@ class WelcomeViewController: UIViewController {
     }
 
     private func configureLayout() {
+        
+//        stackView.snp.makeConstraints{
+//            $0.center.equalToSuperview()
+//        }
+        
         getStartedButton.snp.makeConstraints{
             $0.centerX.equalToSuperview()
             $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset(100)
@@ -39,13 +44,16 @@ class WelcomeViewController: UIViewController {
         }
 
         welcomeImage.snp.makeConstraints{
-            $0.trailing.equalToSuperview().offset(180)
-            $0.width.equalToSuperview().multipliedBy(3.5)
-            $0.height.equalToSuperview()
+//            $0.trailing.equalToSuperview().offset(180)
+//            $0.width.equalToSuperview().multipliedBy(3.5)
+//            $0.height.equalToSuperview()
+            
+            $0.centerX.centerY.equalToSuperview()
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(100)
         }
         
         welcomeTitle.snp.makeConstraints{
-            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(150)
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(250)
             $0.centerX.equalToSuperview()
         }
         
@@ -62,7 +70,7 @@ class WelcomeViewController: UIViewController {
 
     // MARK: - Subviews
     
-    private lazy var stackview: UIStackView = {
+    private lazy var stackView: UIStackView = {
         $0.axis = .horizontal
         $0.spacing = 8
         $0.frame = view.bounds
@@ -72,7 +80,7 @@ class WelcomeViewController: UIViewController {
 
     private lazy var welcomeImage: UIImageView = {
         $0.image = UIImage(named: Constants.welcomeImageName)
-        $0.alpha = 0.3
+        $0.alpha = 0.9
         $0.contentMode = .scaleAspectFill
         return $0
     }(UIImageView())

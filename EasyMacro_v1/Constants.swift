@@ -9,7 +9,7 @@ import Foundation
 
 struct Constants {
     
-    static let welcomeImageName = "easyMacroBackground"
+    static let welcomeImageName = "appleraisin" //"easyMacroBackground"
     static let welcomeTitlePolice = "Pacifico"
     static let welcomeTitle = "Welcome to EasyMacro"
     static let welcomeTextPolice1 = "Jost-Light"

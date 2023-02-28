@@ -40,6 +40,9 @@ class FirstViewController: UIViewController {
     private lazy var stackView: UIStackView = {
         $0.axis = .vertical
         $0.spacing = 8
+        $0.backgroundColor = .systemYellow
+        $0.distribution = .fillEqually
+        
         return $0
     }(UIStackView())
     
