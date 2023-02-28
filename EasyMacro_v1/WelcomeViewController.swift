@@ -26,7 +26,8 @@ class WelcomeViewController: UIViewController {
         view.addSubview(welcomeImage)
         welcomeImage.superview?.addSubview(getStartedButton)
         welcomeImage.superview?.addSubview(welcomeTitle)
-        welcomeImage.superview?.addSubview(welcomeText)
+        welcomeImage.superview?.addSubview(welcomeText1)
+        welcomeImage.superview?.addSubview(welcomeText2)
     }
 
     private func configureLayout() {
@@ -44,17 +45,30 @@ class WelcomeViewController: UIViewController {
         }
         
         welcomeTitle.snp.makeConstraints{
-            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(50)
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(150)
             $0.centerX.equalToSuperview()
         }
         
-        welcomeText.snp.makeConstraints{
-            $0.centerX.centerY.equalToSuperview()
+        welcomeText1.snp.makeConstraints{
+            $0.top.equalTo(welcomeTitle.snp.bottom).offset(10)
             $0.leading.trailing.equalToSuperview().inset(20)
+        }
+        
+        welcomeText2.snp.makeConstraints{
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.bottom.equalTo(getStartedButton.snp.top).offset(-25)
         }
     }
 
     // MARK: - Subviews
+    
+    private lazy var stackview: UIStackView = {
+        $0.axis = .horizontal
+        $0.spacing = 8
+        $0.frame = view.bounds
+        $0.backgroundColor = .systemYellow
+        return $0
+    }(UIStackView())
 
     private lazy var welcomeImage: UIImageView = {
         $0.image = UIImage(named: Constants.welcomeImageName)
@@ -66,7 +80,7 @@ class WelcomeViewController: UIViewController {
     private lazy var welcomeTitle: UILabel = {
         $0.text = Constants.welcomeTitle
         $0.font = UIFont(name: Constants.welcomeTitlePolice, size: 40)
-        $0.textColor = UIColor(red: CGFloat(72.0/255.0), green: CGFloat(70.0/255.0), blue: CGFloat(70.0/255.0), alpha: 1)
+        $0.textColor = UIColor(red: 72.0/255.0, green: 70.0/255.0, blue: 70.0/255.0, alpha: 1)
         $0.textAlignment = .center
         $0.numberOfLines = 0
         
@@ -74,9 +88,19 @@ class WelcomeViewController: UIViewController {
         return $0
     }(UILabel())
     
-    private lazy var welcomeText: UILabel = {
-        $0.text = Constants.welcomeText
-        $0.font = UIFont(name: Constants.welcomeTextPolice, size: 18)
+    private lazy var welcomeText1: UILabel = {
+        $0.text = Constants.welcomeText1
+        $0.font = UIFont(name: Constants.welcomeTextPolice1, size: 18)
+        $0.textColor = .black.withAlphaComponent(0.9)
+        $0.textAlignment = .justified
+        $0.numberOfLines = 0
+        //$0.lineBreakMode = .byWordWrapping
+        return $0
+    }(UILabel())
+    
+    private lazy var welcomeText2: UILabel = {
+        $0.text = Constants.welcomeText2
+        $0.font = UIFont(name: Constants.welcomeTextPolice2, size: 15)
         $0.textColor = .black.withAlphaComponent(0.9)
         $0.textAlignment = .center
         $0.numberOfLines = 0
@@ -88,7 +112,7 @@ class WelcomeViewController: UIViewController {
         $0.setTitle(Constants.welcomeButtonTitle, for: .normal)
         $0.titleLabel?.font = UIFont(name: Constants.welcomeButtonPolice, size: 21)
         $0.addTarget(self, action: #selector(pushAction), for: .touchUpInside)
-        $0.backgroundColor = UIColor(red: CGFloat(67.0/255.0), green: CGFloat(211.0/255.0), blue: CGFloat(175.0/255.0), alpha: 1).withAlphaComponent(0.9)
+        $0.backgroundColor = UIColor(red: 67.0/255.0, green: 211.0/255.0, blue: 175.0/255.0, alpha: 1).withAlphaComponent(0.9)
         $0.layer.cornerRadius = 18
         return addShadow(to: $0)
     }(UIButton())
